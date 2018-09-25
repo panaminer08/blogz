@@ -4,14 +4,14 @@ require 'pg'
 
 set :database, 'postgresql:Racks'
 
-# configure :development do
-#     set :database, 'postgresql:migration-example'
-#   end
+configure :development do
+    set :database, 'postgresql:migration-example'
+  end
   
-#   configure :production do
+  configure :production do
     
-#     set :database, ENV["DATABASE_URL"]
-#   end
+    set :database, ENV["DATABASE_URL"]
+  end
 
 class Intro < ActiveRecord::Base
     belongs_to :user

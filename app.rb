@@ -8,6 +8,7 @@ require "sinatra/flash"
 
 enable :sessions
 
+
 set :database, "postgresql:Racks"
 
 
