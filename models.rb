@@ -2,13 +2,15 @@ require 'sinatra/activerecord'
 # require 'activerecord'
 require 'pg'
 
+# for your computer
 configure :development do
     set :database, 'postgresql:Racks'
-  end
-  
+end
+
+# for heroku
 configure :production do
     set :database, ENV["DATABASE_URL"]
-  end
+end
 
 class Intro < ActiveRecord::Base
     belongs_to :user
@@ -16,6 +18,5 @@ end
 
 class User < ActiveRecord::Base
     has_many :intros, dependent: :destroy
-    
 end
 

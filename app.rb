@@ -5,9 +5,6 @@ require "sinatra/flash"
 
 enable :sessions
 
-set :database, "postgresql:Racks"
-
-
 get '/' do
     
     if session[:user_id]
