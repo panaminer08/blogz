@@ -3,7 +3,7 @@ require 'sinatra/activerecord'
 require 'pg'
 
 configure :development do
-    set :database, 'postgresql:migration-example'
+    set :database, 'postgresql:Racks'
   end
   
   configure :production do
