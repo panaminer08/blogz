@@ -1,0 +1,36 @@
+
+ <nav><a href="/intro">Create Post</a> </nav>
+ <p><h1>Your are signed in</h1> </p>
+ 
+    <% if session[:user_id] %>
+    <a href="/delete"> Delete Profile</a>
+
+    <% else %>
+
+    <% end  %>
+
+  <ul>
+    <nav>  Welcome Back <%= @user.username %> we've missed you!. </nav>
+    
+    <hr>
+<div class="row">
+    <div class="col s3">
+        
+    <header> <p> Your Post </p> </header>
+
+  
+     <% @intro.each do |intro| %>
+    <div class="box">
+      Title:
+      <p> <%= intro.title %><br> </p>
+      
+      
+      Summary:<p> <%= intro.content %> </p><hr>
+      <% end %>
+    <div class="col s3">
+
+    </div>
+    </div>
+</div>
+</ul>
+

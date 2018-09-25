@@ -1,0 +1,14 @@
+
+
+<nav>
+<h1>The <strong>ALIEN</strong> Forum</h1>  
+</nav>
+<a href="/posts/<%= @user_id %>"> Delete </a><br>
+
+
+<% @intro.each do |intro| %> 
+<p>Title: <%= intro.title  %> </p> <br>
+<p>Content:  <%= intro.content %> </p> <hr>
+<% end  %>
+
+ 

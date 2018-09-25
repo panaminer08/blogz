@@ -1,0 +1,28 @@
+body {
+    background-image: url("images/ugly.jpg");
+    background-color: rgb(124, 110, 201);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form {
+    background-color: white;
+}
+
+p {
+    color: white
+}
+
+.nav {
+    background-color: blue;
+}
+
+text {
+    color: white;
+}
+
+.container {
+    width: 200px;
+    background-color: white;
+}
