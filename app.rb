@@ -3,11 +3,7 @@ require_relative "models"
 require "sinatra/activerecord"
 require "sinatra/flash"
 
-
-
-
 enable :sessions
-
 
 set :database, "postgresql:Racks"
 
