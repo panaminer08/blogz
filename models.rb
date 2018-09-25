@@ -6,8 +6,7 @@ configure :development do
     set :database, 'postgresql:Racks'
   end
   
-  configure :production do
-    
+configure :production do
     set :database, ENV["DATABASE_URL"]
   end
 
