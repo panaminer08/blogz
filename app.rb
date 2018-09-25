@@ -98,6 +98,11 @@ get '/planets' do
     end
 end
 
+# get '/post' do
+#     @intro = User.find(session{:user_id})
+#     @intro = Intro.all
+# end
+
 get '/logout' do
     session[:user_id] = nil
     redirect '/'
@@ -105,6 +110,7 @@ end
 
 get '/delete' do
     @user = User.find(session[:user_id])
+    
 
     @user.destroy
     session[:user_id] = nil
