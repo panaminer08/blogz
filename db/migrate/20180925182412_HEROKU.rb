@@ -1,4 +1,4 @@
-class HEROKU < ActiveRecord::Migration[5.2]
+class heroku < ActiveRecord::Migration[5.2]
   def change
   end
 end
