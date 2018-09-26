@@ -4,9 +4,11 @@ DROP TABLE IF EXISTS users CASCADE;
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   username VARCHAR(50),
+  firstname VARCHAR(50),
+  lastname VARCHAR(50),
   password VARCHAR(50),
-  birthday CHAR(8),
-  email VARCHAR(20)
+  birthday CHAR(10),
+  email VARCHAR(50)
 );
 DROP TABLE IF EXISTS intros CASCADE; 
 CREATE TABLE intros (

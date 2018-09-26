@@ -42,6 +42,8 @@ end
 post '/sign-up' do 
     user = User.create(
         username: params[:username],
+        firstname: params[:firstname],
+        lastname: params[:lastname],
         password: params[:password],
         birthday: params[:birthday],
         email: params[:email]
@@ -116,6 +118,13 @@ get '/delete' do
     session[:user_id] = nil
     redirect '/'
 end
+
+get '/post' do
+    intros.id = :id
+    @intro = Intro.find(:id)
+    @delete = @intro.destroy
+end
+
 
 
 

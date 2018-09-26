@@ -10,9 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_09_24_194407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "intros", id: :serial, force: :cascade do |t|
+    t.string "title", limit: 50
+    t.string "content", limit: 200
+    t.integer "user_id"
+  end
+
+  create_table "users", id: :serial, force: :cascade do |t|
+    t.string "username", limit: 50
+    t.string "firstname", limit: 50
+    t.string "lastname", limit: 50
+    t.string "password", limit: 50
+    t.string "birthday", limit: 10
+    t.string "email", limit: 50
+  end
+
+  add_foreign_key "intros", "users", name: "intros_user_id_fkey"
 end
