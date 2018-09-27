@@ -4,11 +4,13 @@ require 'pg'
 
 # for your computer
 configure :development do
+    set :environment, 'development'
     set :database, 'postgresql:Racks'
 end
 
 # for heroku
 configure :production do
+    set :environment, 'production'
     set :database, ENV["DATABASE_URL"]
 end
 
