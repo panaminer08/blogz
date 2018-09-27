@@ -10,7 +10,7 @@ end
 
 # for heroku
 configure :production do
-    DISABLE_DATABASE_ENVIRONMENT_CHECK=1
+    set :environment, 'production'
     set :database, ENV["DATABASE_URL"]
 end
 
