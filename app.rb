@@ -76,6 +76,7 @@ get '/profile' do
     
     if session[:user_id]
         @user = User.find(session[:user_id])
+        
         # @intro = Intro.all
         @intro = @user.intros.last(20).reverse
 

@@ -1,12 +1,21 @@
 
  <nav><a href="/intro">Create Post</a> </nav>
- <p><h1>You are signed in</h1> </p>
- 
-    <% if session[:user_id] %>
-  
+ <header><p><h1>You are signed in</h1> 
+    
+    
+   
 
-    <% end  %>
 
+      <% if session[:user_id] %>
+            <% end %>
+    
+        
+           
+       Username:  <%= @user.username %> <br>
+       FirstName: <%= @user.firstname %> <br>
+        LastName: <%= @user.lastname  %> <br>
+       Birthday:  <%= @user.birthday %>
+                 
   <ul>
     <nav>  Welcome Back <%= @user.username %> we've missed you!. </nav>
     
@@ -21,6 +30,7 @@
     <div class="box">
       Title:
       <p> <%= intro.title %><br> </p>
+      <p><%=  intro.content %><br> </p>
       
       
       Summary:<p> <%= intro.content %> </p><hr>
