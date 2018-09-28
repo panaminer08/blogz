@@ -4,7 +4,7 @@ require 'pg'
 
 # for your computer
 configure :development do
-    set :environment, 'development'
+    # set :environment, 'development'
     set :database, 'postgresql:Racks'
 end
 

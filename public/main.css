@@ -1,9 +1,14 @@
 body {
-    background-image: url(".jpg");
+    background-image: url("human.jpg");
     background-color: rgb(130, 129, 138);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.line {
+    background-color: white;
+    border: 15px;
 }
 
 p {

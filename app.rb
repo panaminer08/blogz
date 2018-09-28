@@ -73,19 +73,22 @@ end
 
 
 get '/profile' do
-    
+
     if session[:user_id]
+        @users = User.all
         @user = User.find(session[:user_id])
-        
         # @intro = Intro.all
-        @intro = @user.intros.last(20).reverse
-
-        
-    erb :profile 
+        @intro = @user.intros.last(20).reverse  
+        erb :profile 
     else
-
         erb :home
     end
+end
+
+get '/users' do
+    @users = User.all
+    # @user = User.find(session[:user_id])
+    erb :users
 end
 
 
