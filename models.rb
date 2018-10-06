@@ -10,7 +10,7 @@ end
 
 # for heroku
 configure :production do
-    set :environment, 'production'
+    # set :environment, 'production'
     set :database, ENV["DATABASE_URL"]
 end
 
