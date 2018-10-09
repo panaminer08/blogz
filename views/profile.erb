@@ -5,8 +5,13 @@
 
   <ul>
     <nav>  Welcome Back <%= @user.username %> we've missed you!.</nav>
-    <a href="/delete">Delete Profile</a>
-    
+    <a href="/delete">Delete Profile</a><br>
+    <table>
+    <tr><%= @user.username %></tr><br>
+    <tr><%= @user.firstname %></tr><br>
+    <tr><%= @user.lastname %></tr><br>
+    <tr><%= @user.birthday %></tr>
+    </table>
     <hr>
 <div class="row">
     <div class="col s3">
