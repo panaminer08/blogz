@@ -1,5 +1,5 @@
 body {
-    background-image: url("human.jpg");
+    background-image: url("alien.jpg");
     background-color: rgb(130, 129, 138);
     background-position: center;
     background-repeat: no-repeat;
@@ -27,3 +27,8 @@ text {
     width: 200px;
     background-color: white;
 }
+
+nav {
+    background-color: black;
+}
+
